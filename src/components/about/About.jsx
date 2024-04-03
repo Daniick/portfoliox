@@ -2,6 +2,7 @@ import React from "react";
 import "./about.css";
 import Abouti from "../../assets/LINKDN-removebg-preview.png";
 import AboutBox from "./AboutBox";
+import CV from "../../assets/CV.pdf";
 
 const About = ({ darkMode }) => {
   return (
@@ -31,7 +32,8 @@ const About = ({ darkMode }) => {
               frameworks.
             </p>
             <a
-              href=""
+              href={CV}
+              target="_blank"
               className={`btn ${darkMode ? " text-white" : "light-theme "}`}
             >
               Download CV
