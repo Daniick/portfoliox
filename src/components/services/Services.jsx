@@ -10,21 +10,21 @@ const data = [
     image: Service1,
     title: "UI/UX design",
     description:
-      "Lorem ipsum dolor sit amet consectetuer adipiscing elit         aenean commodo ligula eget.",
+      "Design focuses on creating intuitive digital interfaces for user satisfaction and efficiency. It merges visual design with user experience principles.",
   },
   {
     id: 2,
     image: Service2,
-    title: "Web Development",
+    title: "Front-End Development",
     description:
-      "Lorem ipsum dolor sit amet consectetuer adipiscing elit         aenean commodo ligula eget.",
+      "Involves creating and maintaining websites or web applications using programming languages like React, Tailwind, and JavaScript.",
   },
   {
     id: 3,
     image: Service3,
-    title: "Photography",
+    title: "Back-End Development",
     description:
-      "Lorem ipsum dolor sit amet consectetuer adipiscing elit         aenean commodo ligula eget.",
+      "Involves building and maintaining server-side logic and databases for web applications, ensuring functionality and data management.",
   },
 ];
 
