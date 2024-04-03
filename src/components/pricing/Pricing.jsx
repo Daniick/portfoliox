@@ -4,13 +4,21 @@ import Image1 from "../../assets/price-1.svg";
 import Image2 from "../../assets/price-2.svg";
 import Image3 from "../../assets/price-3.svg";
 
-const Pricing = () => {
+const Pricing = ({ darkMode }) => {
   return (
-    <section className="pricing container section" id="portfolio">
-      <h2 className="section_title">Pricing Plans</h2>
+    <section className="pricing container section" id="pricing">
+      <h2
+        className={`section_title ${darkMode ? " text-white" : "light-theme"}`}
+      >
+        Pricing Plans
+      </h2>
 
       <div className="pricing__container grid">
-        <div className="price__item">
+        <div
+          className={`price__item ${
+            darkMode ? " text-black bg-slate-200" : "light-theme"
+          }`}
+        >
           <img src={Image1} alt="" className="pricing__img" />
           <h3 className="pricing__plan">Basic</h3>
           <p className="pricing__title">
@@ -20,12 +28,19 @@ const Pricing = () => {
           <h3 className="price">
             <em>$</em> 9 <span>Month</span>
           </h3>
-          <a href="" className="btn">
+          <a
+            href=""
+            className={`btn ${darkMode ? " text-white" : "light-theme "}`}
+          >
             Get Started
           </a>
         </div>
 
-        <div className="price__item best">
+        <div
+          className={`price__item best ${
+            darkMode ? " text-black bg-slate-200" : "light-theme"
+          }`}
+        >
           <img src={Image2} alt="" className="pricing__img" />
           <span className="badge">Recommended</span>
           <h3 className="pricing__plan">Premium</h3>
@@ -36,12 +51,19 @@ const Pricing = () => {
           <h3 className="price">
             <em>$</em> 15 <span>Month</span>
           </h3>
-          <a href="" className="btn">
+          <a
+            href=""
+            className={`btn ${darkMode ? " text-white" : "light-theme "}`}
+          >
             Get Started
           </a>
         </div>
 
-        <div className="price__item ">
+        <div
+          className={`price__item ${
+            darkMode ? " text-black bg-slate-200" : "light-theme"
+          }`}
+        >
           <img src={Image3} alt="" className="pricing__img" />
 
           <h3 className="pricing__plan">Ultimate</h3>
@@ -52,7 +74,10 @@ const Pricing = () => {
           <h3 className="price">
             <em>$</em> 19 <span>Month</span>
           </h3>
-          <a href="" className="btn">
+          <a
+            href=""
+            className={`btn ${darkMode ? " text-white" : "light-theme "}`}
+          >
             Get Started
           </a>
         </div>

@@ -37,7 +37,7 @@
   outline: none;
   border-radius: 1.875rem;
   padding: 0.625rem 1.875rem;
-  z-index: 1;
+  z-index: 0;
 }
 
 .contact__form-area {
@@ -46,4 +46,31 @@
 
 .contact__form-area textarea {
   resize: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .contact__container {
+    grid-template-columns: 300px 360px;
+    justify-content: center;
+  }
+  .contact__form-group {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact__container {
+    grid-template-columns: 310px;
+    row-gap: 1.875rem;
+  }
+
+  .contact__info {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .contact__container {
+    grid-template-columns: 1fr;
+  }
 }

@@ -28,10 +28,14 @@ const data = [
   },
 ];
 
-const Services = () => {
+const Services = ({ darkMode }) => {
   return (
     <section className="services container section" id="services">
-      <h2 className="section_title">Services</h2>
+      <h2
+        className={`section_title ${darkMode ? " text-white" : "light-theme"}`}
+      >
+        Services
+      </h2>
 
       <div className="services__container grid">
         {data.map(({ id, image, title, description }) => {

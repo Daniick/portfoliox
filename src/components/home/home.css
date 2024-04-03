@@ -14,7 +14,7 @@
 .home__img {
   margin-bottom: 1.5rem;
   position: relative;
-  z-index: 1000;
+  z-index: 9;
   border-radius: 100%;
   width: 220px;
   transition: 0.4s;
@@ -38,7 +38,7 @@
 
 .home__socials-link {
   color: var(--title-color);
-  z-index: 100;
+  z-index: 9;
   font-size: 1.3rem;
   transition: 0.3s;
 }
@@ -160,4 +160,10 @@
 .s11 {
   bottom: 10%;
   right: 2%;
+}
+
+@media screen and (max-width: 1024px) {
+  .home__social-link {
+    font-size: 1.125rem;
+  }
 }

@@ -28,13 +28,19 @@ const data = [
   },
 ];
 
-const Testimonials = () => {
+const Testimonials = ({ darkMode }) => {
   return (
-    <section className="testimonials container section">
-      <h2 className="section_title">Clients & Reviews</h2>
+    <section className="testimonials container section" id="testimonials">
+      <h2
+        className={`section_title ${darkMode ? " text-white" : "light-theme"}`}
+      >
+        Clients & Reviews
+      </h2>
 
       <Swiper
-        className="testimonials__container grid"
+        className={`testimonials__container grid ${
+          darkMode ? " text-black" : "light-theme"
+        }`}
         modules={[Pagination]}
         spaceBetween={30}
         slidesPerView={1}
@@ -48,8 +54,20 @@ const Testimonials = () => {
               <div className="thumb">
                 <img src={image} alt="" />
               </div>
-              <h3 className="testimonials__title">{title}</h3>
-              <span className="subtitle">{subtitle}</span>
+              <h3
+                className={`testimonials__title  ${
+                  darkMode ? " text-white" : "light-theme"
+                }`}
+              >
+                {title}
+              </h3>
+              <span
+                className={`subtitle  ${
+                  darkMode ? " text-slate-300" : "light-theme"
+                }`}
+              >
+                {subtitle}
+              </span>
               <div className="comment">{comment}</div>
             </SwiperSlide>
           );

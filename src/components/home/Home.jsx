@@ -5,19 +5,34 @@ import HeaderSocials from "./HeaderSocials";
 import ScrollDownd from "./ScrollDownd";
 import Shapes from "./Shapes";
 
-const Home = () => {
+const Home = ({ darkMode, toggleDarkMode }) => {
   return (
-    <section className="home container" id="home">
+    <section className="home container " id="home">
+      <button
+        onClick={toggleDarkMode}
+        className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded mb-4 text-xs w-[60px] fixed top-10 right-10  z-50"
+      >
+        {darkMode ? "Ligth " : "Dark "}
+      </button>
       <div className="intro">
         <img src={Me} alt="" className="home__img" />
-        <h1 className="home__name">David Ortega</h1>
+        <h1
+          className={`home__name ${
+            darkMode ? " text-white hover:text-yellow-300" : ""
+          }`}
+        >
+          David Ortega
+        </h1>
         <span className="home__education">I'm a FullStack developer</span>
-        <HeaderSocials />
+        <HeaderSocials darkMode={darkMode} />
 
-        <a href="#contact" className="btn">
+        <a
+          href="#contact"
+          className={`btn ${darkMode ? " text-white" : "light-theme "}`}
+        >
           Hire Me
         </a>
-        <ScrollDownd />
+        <ScrollDownd darkMode={darkMode} />
       </div>
       <Shapes />
     </section>

@@ -3,10 +3,14 @@ import "./resume.css";
 import Data from "./Data";
 import Card from "./Card";
 
-const Resume = () => {
+const Resume = ({ darkMode }) => {
   return (
     <section className="resume container section" id="resume">
-      <h2 className="section_title">Experience</h2>
+      <h2
+        className={`section_title ${darkMode ? " text-white" : "light-theme"}`}
+      >
+        Experience
+      </h2>
 
       <div className="resume__container grid">
         <div className="timeline grid">

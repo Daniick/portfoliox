@@ -1,15 +1,30 @@
 import React from "react";
 import "./contact.css";
 
-const Contact = () => {
+const Contact = ({ darkMode }) => {
   return (
-    <section className="contact container section">
-      <h2 className="section_title"> Get In Touch</h2>
+    <section className="contact container section" id="contact">
+      <h2
+        className={`section_title ${darkMode ? " text-white" : "light-theme"}`}
+      >
+        {" "}
+        Get In Touch
+      </h2>
 
       <div className="contact__container grid">
         <div className="contact__info">
-          <h3 className="contact__title">Let's talk about everything!</h3>
-          <p className="contact__details">
+          <h3
+            className={`contact__title ${
+              darkMode ? " text-slate-200" : "light-theme"
+            }`}
+          >
+            Let's talk about everything!
+          </h3>
+          <p
+            className={`contact__details ${
+              darkMode ? " text-slate-400" : "light-theme"
+            }`}
+          >
             Don't like forms? Send me an email. 👋
           </p>
         </div>
@@ -19,7 +34,11 @@ const Contact = () => {
             <div className="contact__form-div">
               <input
                 type="text"
-                className="contact__form-input"
+                className={`contact__form-input ${
+                  darkMode
+                    ? " text-white bg-slate-500 placeholder-white"
+                    : "light-theme "
+                }`}
                 placeholder="Insert Your name"
               />
             </div>
@@ -27,7 +46,11 @@ const Contact = () => {
             <div className="contact__form-div">
               <input
                 type="email"
-                className="contact__form-input"
+                className={`contact__form-input ${
+                  darkMode
+                    ? " text-white bg-slate-500 placeholder-white"
+                    : "light-theme "
+                }`}
                 placeholder="Insert Your email"
               />
             </div>
@@ -35,7 +58,11 @@ const Contact = () => {
           <div className="contact__form-div">
             <input
               type="text"
-              className="contact__form-input"
+              className={`contact__form-input ${
+                darkMode
+                  ? " text-white bg-slate-500 placeholder-white"
+                  : "light-theme "
+              }`}
               placeholder="Insert Your subject"
             />
           </div>
@@ -46,11 +73,20 @@ const Contact = () => {
               id=""
               cols="30"
               rows="10"
-              className="contact__form-input"
+              className={`contact__form-input ${
+                darkMode
+                  ? " text-white bg-slate-500 placeholder-white"
+                  : "light-theme "
+              }`}
               placeholder="Write your message"
             ></textarea>
           </div>
-          <button className="btn"> Send Message</button>
+          <button
+            className={`btn ${darkMode ? " text-white" : "light-theme "}`}
+          >
+            {" "}
+            Send Message
+          </button>
         </form>
       </div>
     </section>
