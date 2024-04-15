@@ -9,7 +9,7 @@ const Menu = [
   {
     id: 1,
     image: Work1,
-    title: "Project Management Illustration",
+    title: "Bank Design",
     category: "Front-End(React)",
     link: "https://bank-personal-davidortega.netlify.app",
   },
@@ -23,7 +23,7 @@ const Menu = [
   {
     id: 3,
     image: Work3,
-    title: "Delivery App Wireframe",
+    title: "Pokedex API",
     category: "React + API",
     link: "https://pokedex-danick.netlify.app",
   },
@@ -31,7 +31,7 @@ const Menu = [
   {
     id: 4,
     image: Work4,
-    title: "Onboarding Motivation",
+    title: "GPT-3",
     category: "Front-End(React)",
     link: "https://gpt3-ia-davidortega.netlify.app",
   },
@@ -39,7 +39,7 @@ const Menu = [
   {
     id: 5,
     image: Work5,
-    title: "iMac Mockup Design",
+    title: "Shirt 3D Designer",
     category: "Branding",
     link: "https://shirt-3d.netlify.app",
   },
