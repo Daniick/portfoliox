@@ -1,7 +1,30 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./contact.css";
+import emailjs from "@emailjs/browser";
 
 const Contact = ({ darkMode }) => {
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_svtrf6d",
+        "template_uu6uf5z",
+        form.current,
+        "R-af3L1YXKdeiJ5b9"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
+  };
+
   return (
     <section className="contact container section" id="contact">
       <h2
@@ -29,11 +52,17 @@ const Contact = ({ darkMode }) => {
           </p>
         </div>
 
-        <form action="" className="contact__form">
+        <form
+          ref={form}
+          onSubmit={sendEmail}
+          action=""
+          className="contact__form"
+        >
           <div className="contact__form-group">
             <div className="contact__form-div">
               <input
                 type="text"
+                name="name"
                 className={`contact__form-input ${
                   darkMode
                     ? " text-white bg-slate-500 placeholder-white"
@@ -46,6 +75,7 @@ const Contact = ({ darkMode }) => {
             <div className="contact__form-div">
               <input
                 type="email"
+                name="email"
                 className={`contact__form-input ${
                   darkMode
                     ? " text-white bg-slate-500 placeholder-white"
@@ -58,6 +88,7 @@ const Contact = ({ darkMode }) => {
           <div className="contact__form-div">
             <input
               type="text"
+              name="subject"
               className={`contact__form-input ${
                 darkMode
                   ? " text-white bg-slate-500 placeholder-white"
@@ -69,7 +100,7 @@ const Contact = ({ darkMode }) => {
 
           <div className="contact__form-div contact__form-area">
             <textarea
-              name=""
+              name="message"
               id=""
               cols="30"
               rows="10"
