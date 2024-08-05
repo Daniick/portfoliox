@@ -2,7 +2,7 @@ import React from "react";
 import "./about.css";
 import Abouti from "../../assets/LINKDN-removebg-preview.png";
 import AboutBox from "./AboutBox";
-import CV from "../../assets/CV.pdf";
+import CV from "../../assets/Uploaded CV.pdf";
 
 const About = ({ darkMode }) => {
   return (
